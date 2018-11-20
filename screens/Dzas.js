@@ -162,18 +162,7 @@ onShare() {
                 }));
               },300);
             }}>Facebook</Button>
-          <Button iconSrc={{ uri: WHATSAPP_ICON }}
-                  onPress={()=>{
-              this.onCancel();
-              setTimeout(() => {
-                Share.shareSingle(Object.assign(shareOptions, {
-                  "social": "whatsapp"
-                }));
-              },300);
-            }}>Whatsapp</Button>
-
-            <Button
-            iconSrc={{ uri: CLIPBOARD_ICON }}
+          <Button iconSrc={{ uri: CLIPBOARD_ICON }}
                   onPress={()=>{
               this.onCancel();
               setTimeout(() => {
