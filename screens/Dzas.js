@@ -9,17 +9,11 @@ ImageBackground,
 Button,
 TouchableOpacity, Linking} from "react-native";
 
-import Share, { ShareSheet, Button } from 'react-native-share';
+import  Share from 'react-native-share';
 
 import TrackPlayer from 'react-native-track-player';
 
-const shareOptions = {
-    title : 'Share via',
-    social : Share.Social.WHATSAPP,
-    social : Share.Social.FACEBOOK,
-    social : Share.Social.INSTAGRAM
-    social : Share.Social.EMAIL
-}
+
 
 export default class Dzas extends React.Component {
 
@@ -143,52 +137,12 @@ onShare() {
       </View>
       </ImageBackground>
 
-      <ShareSheet visible={this.state.visible} onCancel={this.onCancel.bind(this)}>
-          <Button iconSrc={{ uri: TWITTER_ICON }}
-                  onPress={()=>{
-              this.onCancel();
-              setTimeout(() => {
-                Share.shareSingle(Object.assign(shareOptions, {
-                  "social": "twitter"
-                }));
-              },300);
-            }}>Twitter</Button>
-          <Button iconSrc={{ uri: FACEBOOK_ICON }}
-                  onPress={()=>{
-              this.onCancel();
-              setTimeout(() => {
-                Share.shareSingle(Object.assign(shareOptions, {
-                  "social": "facebook"
-                }));
-              },300);
-            }}>Facebook</Button>
-          <Button iconSrc={{ uri: CLIPBOARD_ICON }}
-                  onPress={()=>{
-              this.onCancel();
-              setTimeout(() => {
-                if(typeof shareOptions["www.febc.ph"] !== undefined) {
-                  Clipboard.setString(shareOptions["url"]);
-                  if (Platform.OS === "android") {
-                    ToastAndroid.show('Link copiado al portapapeles', ToastAndroid.SHORT);
-                  } else if (Platform.OS === "ios") {
-                    AlertIOS.alert('Link copiado al portapapeles');
-                  }
-                }
-              },300);
-            }}>Copy Link</Button>
 
-        </ShareSheet>
 
       </View>
     );
   }
 }
-
-const TWITTER_ICON = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAB8AAAAfAEVD+3kAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAJBQTFRFUKvxUavxUazxUqzxVq7xWrDyW7DyXrLyX7LyYLPyYbPyZbXzZ7bza7jzcLr0er/0fcH1gcL1gcP1hMT1hsX1h8X1jMj2lcz3nND3p9X4rNf4sdr5ttz5uN35ut75vuD6yeX71Or82e382+783/D85vP96fT96/X97Pb+7vf+9fr+9vv++fz//P7//f7/////8j2D5AAAAGZJREFUGBmdwQkCQlAABNCJVKQFpZAlS/RVc//b9Rcu4D0sYtmQrCjZOz6Uc7UGUJC/dwglZHtdOR+Srx0UtyZFTSmHduLsBiP70jjCCEZqJWb3jtKwgXGIU0Gy8jDZJs++eVyw2B+F9QxfsK66hAAAAABJRU5ErkJggg=="
-const FACEBOOK_ICON = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAB8AAAAfAEVD+3kAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAFdQTFRF////PVKjPFehOFeiN1OhOlWfO1WfOlSgOVWfOlSfOlWfOlafOVSfOlafOlSfOlaeO1SgO1afOlWfOlWfOVWeO1WfOlWfOlWfOlWgO1WfOlWfOlWfOlWfe92FGgAAABx0Uk5TABkmKS4wRUZIWGBlcICIiYuYrLC2t7nQ2+f4/teI5bkAAABKSURBVBhXrcw3DoAwFATRIRhMzvnf/5x01grJHVO+YrBPxOHZm3pRKIFO4ICsmgUGuMwEergFJp9C4bcALQCsAUaXQO7O+ONfeAFKXxaY3HNOwAAAAABJRU5ErkJggg=="
-
-
-const CLIPBOARD_ICON = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAaVBMVEUAAAAAcfEAbfEAbPAAbe8AbPAAbf8AbO8Aa+0AcO8AbfEAbPAAZv8Aa/IAbe8AbfEAbPIAbe8AbOsAgP8Aau0AbO8AceMAbO8AbfAAbvAAa/IAbPEAbe8AbO8AbvAAbvEAbfAAbfAAAADjeTeUAAAAInRSTlMAEp94frUHTisQbosFE3CNKGAaBB1QCZKInDlcXn95Sox3z/fdjQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiCxQQIDCQiFaOAAAAXUlEQVQY08WPSRKAIAwEA1FBEVdU3PX/nxQC+gXn0tVduQQAgHH0S9IMwoQk5IUqPXVVNyG0neod0QwhjBPa2QeIAUh+DMv6ugkBNnoOd1tpF47vXgrCed1xnDl9AEZLBRtQQdWWAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTExLTIwVDE2OjMyOjQ4KzAxOjAwCmf9eQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0xMS0yMFQxNjozMjo0OCswMTowMHs6RcUAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC"
 
 const styles = StyleSheet.create({
   MainContainer:{

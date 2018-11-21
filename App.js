@@ -16,6 +16,9 @@ Button,
 TouchableOpacity, Linking} from 'react-native';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 
+import  {Share, ShareSheet} from 'react-native-share';
+
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
@@ -25,6 +28,40 @@ const instructions = Platform.select({
 
 type Props = {};
 class Dzas extends React.Component {
+
+
+  async componentDidMount() {
+    await TrackPlayer.setupPlayer({});
+    await TrackPlayer.add({
+      id: 'track',
+      url: 'http://202.55.90.209:8000/febc_dway', // just for test!
+      title: 'DZAS Radio',
+      artist: 'DZAS DJ',
+    })
+    TrackPlayer.play();
+  }
+
+  play() {
+    TrackPlayer.add({
+      id: 'track',
+      url: 'http://202.55.90.209:8000/febc_dway',
+      title: 'DZAS Radio',
+      artist: 'DZAS Radio',
+    }).then(() => {
+      TrackPlayer.play();
+    });
+  }
+
+
+  onShare() {
+    const shareOptions = {
+      title: 'Share our website',
+      url: "https://www.febc.ph",
+      subject: "Share Link",
+    };
+    return Share.open(shareOptions);
+  }
+
   render() {
     return (
       <View>
