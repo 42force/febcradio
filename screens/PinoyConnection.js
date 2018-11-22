@@ -98,8 +98,8 @@ onShare() {
           justifyContent: 'center',
         }}>
 
-          <TouchableOpacity onPress={() => this.play()} accessibilityLabel="play button">
-          <Image source={require('./assets/playbtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+          <TouchableOpacity onPress={() => TrackPlayer.stop()} accessibilityLabel="play button">
+          <Image source={require('./assets/pausebtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
         </TouchableOpacity>
 
         </View>

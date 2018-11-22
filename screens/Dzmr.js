@@ -25,6 +25,8 @@ export default class Dzmr extends React.Component {
             compactCapabilities: [CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO],
             stopWithApp: true
         });
+
+
     await TrackPlayer.add({
       id: 'track',
       url: 'http://202.55.90.209:8000/febc_dzmr', // just for test!
@@ -96,8 +98,8 @@ onShare() {
           justifyContent: 'center',
         }}>
 
-          <TouchableOpacity onPress={() => this.play()} accessibilityLabel="play button">
-                    <Image source={require('./assets/playbtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+          <TouchableOpacity onPress={() => TrackPlayer.stop()} accessibilityLabel="play button">
+                    <Image source={require('./assets/pausebtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
                     </TouchableOpacity>
 
         </View>

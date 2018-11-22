@@ -41,7 +41,7 @@ export default class Care extends React.Component {
 
   static navigationOptions = ({ navigation }) => {
     return {
-      headerTitle: 'Care Radio',
+      headerTitle: 'Care',
       headerRight: (
         <Button
           title="Pinoy Connection"

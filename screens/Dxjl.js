@@ -90,7 +90,7 @@ onShare() {
 
       </View>
 
-        <Image source={require('./assets/106DXKI.png')} style={{ resizeMode : 'contain', width: 275, height: 300}} />
+        <Image source={require('./assets/DXJL1033.png')} style={{ resizeMode : 'contain', width: 275, height: 300}} />
 
         <View style={{
           flex: 1,
@@ -99,7 +99,7 @@ onShare() {
         }}>
 
           <TouchableOpacity onPress={() => this.play()} accessibilityLabel="play button">
-                    <Image source={require('./assets/playbtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+                    <Image source={require('./assets/pausebtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
                     </TouchableOpacity>
 
         </View>

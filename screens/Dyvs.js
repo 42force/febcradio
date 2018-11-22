@@ -13,8 +13,6 @@ import  Share from 'react-native-share';
 
 import TrackPlayer,  { CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO }from 'react-native-track-player';
 
-
-
 export default class Dyvs extends React.Component {
 
   async componentDidMount() {
@@ -34,8 +32,6 @@ export default class Dyvs extends React.Component {
     })
     TrackPlayer.play();
   }
-
-
 
   static navigationOptions = ({ navigation }) => {
     return {
@@ -91,7 +87,7 @@ onShare() {
 
       </View>
 
-        <Image source={require('./assets/1233DYVSS.png')} style={{ resizeMode : 'contain', width: 275, height: 300}} />
+        <Image source={require('./assets/1233DYVS.png')} style={{ resizeMode : 'contain', width: 275, height: 300}} />
 
         <View style={{
           flex: 1,
@@ -99,8 +95,8 @@ onShare() {
           justifyContent: 'center',
         }}>
 
-          <TouchableOpacity onPress={() => this.play()} accessibilityLabel="play button">
-                    <Image source={require('./assets/playbtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+          <TouchableOpacity onPress={() => TrackPlayer.stop()} accessibilityLabel="play button">
+                    <Image source={require('./assets/pausebtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
                     </TouchableOpacity>
 
         </View>

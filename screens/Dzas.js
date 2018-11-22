@@ -15,8 +15,6 @@ import TrackPlayer,  { CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPAB
 
 
 
-
-
 export default class Dzas extends React.Component{
 
 
