@@ -14,7 +14,6 @@ import  Share from 'react-native-share';
 import TrackPlayer from 'react-native-track-player';
 
 
-
 export default class Dzas extends React.Component {
 
   async componentDidMount() {
