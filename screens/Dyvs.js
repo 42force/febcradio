@@ -84,8 +84,8 @@ onShare() {
       }}>
 
       <TouchableOpacity
-      title="Pinoy Connection"
-      onPress={() => this.props.navigation.navigate('PinoyConnection')}
+      title="Dyfr"
+      onPress={() => this.props.navigation.navigate('Dyfr')}
       color="#a41034">
             <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
       </TouchableOpacity>
@@ -101,8 +101,8 @@ onShare() {
         }}>
 
         <TouchableOpacity
-        title="Dxki"
-        onPress={() => this.props.navigation.navigate('Dxki')}
+        title="Dzmr"
+        onPress={() => this.props.navigation.navigate('Dzmr')}
         color="#a41034">
               <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
         </TouchableOpacity>

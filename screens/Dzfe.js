@@ -42,8 +42,8 @@ export default class Dzfe extends React.Component {
       headerTitle: 'DZFE Radio',
       headerRight: (
         <Button
-          title="Dzmr"
-          onPress={() => navigation.navigate('Dzmr')}
+          title="Dxfe"
+          onPress={() => navigation.navigate('Dxfe')}
           color="#a41034"
         />
       ),
@@ -87,7 +87,7 @@ onShare() {
 
       <TouchableOpacity
       title="Dzfe"
-      onPress={() => this.props.navigation.navigate('Dzfe')}
+      onPress={() => this.props.navigation.navigate('Dzas')}
       color="#a41034">
             <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
       </TouchableOpacity>
@@ -102,8 +102,8 @@ onShare() {
           justifyContent: 'center',
         }}>
         <TouchableOpacity
-        title="Dzmr Radio"
-        onPress={() => this.props.navigation.navigate('Dzmr')}
+        title="Dxjl Radio"
+        onPress={() => this.props.navigation.navigate('Dxjl')}
         color="#a41034">
               <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
         </TouchableOpacity>

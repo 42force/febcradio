@@ -40,8 +40,8 @@ export default class Dzmr extends React.Component {
       headerTitle: 'DZMR Radio',
       headerRight: (
         <Button
-          title="Dzas"
-          onPress={() => navigation.navigate('Dzas')}
+          title="PinoyConnection"
+          onPress={() => navigation.navigate('PinoyConnection')}
           color="#a41034"
         />
       ),
@@ -84,8 +84,8 @@ onShare() {
       }}>
 
       <TouchableOpacity
-      title="Dxki"
-      onPress={() => this.props.navigation.navigate('Dxki')}
+      title="Dyvs"
+      onPress={() => this.props.navigation.navigate('Dyvs')}
       color="#a41034">
             <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
       </TouchableOpacity>
@@ -101,8 +101,8 @@ onShare() {
         }}>
 
         <TouchableOpacity
-        title="Dzas"
-        onPress={() => this.props.navigation.navigate('Dzas')}
+        title="PinoyConnection"
+        onPress={() => this.props.navigation.navigate('PinoyConnection')}
         color="#a41034">
               <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
         </TouchableOpacity>

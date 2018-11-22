@@ -86,8 +86,8 @@ export default class Dzas extends React.Component{
         }}>
 
         <TouchableOpacity
-        title="Dzmr"
-        onPress={() => this.props.navigation.navigate('Dzmr')}
+        title="PinoyConnection"
+        onPress={() => this.props.navigation.navigate('PinoyConnection')}
         color="#a41034">
               <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
         </TouchableOpacity>

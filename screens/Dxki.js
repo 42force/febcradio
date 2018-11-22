@@ -40,8 +40,8 @@ export default class Dyvs extends React.Component {
       headerTitle: 'DXKI Radio',
       headerRight: (
         <Button
-          title="DZMR"
-          onPress={() => navigation.navigate('Dzmr')}
+          title="Dyfr"
+          onPress={() => navigation.navigate('Dyfr')}
           color="#a41034"
         />
       ),
@@ -84,8 +84,8 @@ onShare() {
       }}>
 
       <TouchableOpacity
-      title="Dzas"
-      onPress={() => this.props.navigation.navigate('Dzas')}
+      title="Care"
+      onPress={() => this.props.navigation.navigate('Care')}
       color="#a41034">
             <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
       </TouchableOpacity>
@@ -101,8 +101,8 @@ onShare() {
         }}>
 
         <TouchableOpacity
-        title="Dzmr"
-        onPress={() => this.props.navigation.navigate('Dzmr')}
+        title="Dyfr"
+        onPress={() => this.props.navigation.navigate('Dyfr')}
         color="#a41034">
               <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
         </TouchableOpacity>

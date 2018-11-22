@@ -42,8 +42,8 @@ export default class Care extends React.Component {
       headerTitle: 'Care',
       headerRight: (
         <Button
-          title="Pinoy Connection"
-          onPress={() => navigation.navigate('PinoyConnection')}
+          title="Dxki"
+          onPress={() => navigation.navigate('Dxki')}
           color="#a41034"
         />
       ),
@@ -86,10 +86,10 @@ onShare() {
       }}>
 
       <TouchableOpacity
-      title="DZFE"
-      onPress={() => this.props.navigation.navigate('Dzfe')}
+      title="Dxjl"
+      onPress={() => this.props.navigation.navigate('Dxjl')}
       color="#a41034">
-            <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+            <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
       </TouchableOpacity>
 
       </View>
@@ -102,8 +102,8 @@ onShare() {
           justifyContent: 'center',
         }}>
         <TouchableOpacity
-        title="PinoyConnection"
-        onPress={() => this.props.navigation.navigate('PinoyConnection')}
+        title="DXKI Radio"
+        onPress={() => this.props.navigation.navigate('Dxki')}
         color="#a41034">
               <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
         </TouchableOpacity>

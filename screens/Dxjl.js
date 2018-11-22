@@ -41,8 +41,8 @@ export default class Dxjl extends React.Component {
       headerTitle: 'DXJL Radio',
       headerRight: (
         <Button
-          title="DXKI"
-          onPress={() => navigation.navigate('Dxki')}
+          title="Care"
+          onPress={() => navigation.navigate('Care')}
           color="#a41034"
         />
       ),
@@ -102,8 +102,8 @@ onShare() {
         }}>
 
         <TouchableOpacity
-        title="Dxki"
-        onPress={() => this.props.navigation.navigate('Dxki')}
+        title="Care"
+        onPress={() => this.props.navigation.navigate('Care')}
         color="#a41034">
               <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
         </TouchableOpacity>
