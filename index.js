@@ -7,7 +7,6 @@ import TrackPlayer from 'react-native-track-player';
 
 AppRegistry.registerComponent(appName, () => App);
 
-
 TrackPlayer.registerEventHandler(async (data) => {
   if (data.type === 'playback-track-changed') {
   } else if(data.type == 'remote-play') {

@@ -13,27 +13,26 @@ import  Share from 'react-native-share';
 
 import TrackPlayer,  { CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO }from 'react-native-track-player';
 
-
-
-export default class Dxki extends React.Component {
+export default class Dyvs extends React.Component {
 
   async componentDidMount() {
     await TrackPlayer.setupPlayer({});
 
-    TrackPlayer.updateOptions({
+
+    await TrackPlayer.updateOptions({
             capabilities: [CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO],
             compactCapabilities: [CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO],
             stopWithApp: true
-        });
+    });
 
     await TrackPlayer.add({
       id: 'track',
-      url: 'http://202.55.90.209:8000/febc_dxki', // just for test!
-      title: 'DZAS Radio',
-      artist: 'DZAS DJ',
+      url: 'http://202.55.90.209:8000/febc_dxki',
+      title: 'DXKI Radio',
+      artist: 'DXKI Radio',
     })
     TrackPlayer.play();
-  }
+}
 
 
   static navigationOptions = ({ navigation }) => {
@@ -41,8 +40,8 @@ export default class Dxki extends React.Component {
       headerTitle: 'DXKI Radio',
       headerRight: (
         <Button
-          title="DYFR"
-          onPress={() => navigation.navigate('Dyfr')}
+          title="DZMR"
+          onPress={() => navigation.navigate('Dzmr')}
           color="#a41034"
         />
       ),
@@ -84,9 +83,12 @@ onShare() {
         justifyContent: 'center',
       }}>
 
-        <TouchableOpacity onPress={() => this.play()} accessibilityLabel="play button">
-                  <Image source={require('./assets/playbtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
-                  </TouchableOpacity>
+      <TouchableOpacity
+      title="Dzas"
+      onPress={() => this.props.navigation.navigate('Dzas')}
+      color="#a41034">
+            <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+      </TouchableOpacity>
 
       </View>
 
@@ -98,10 +100,12 @@ onShare() {
           justifyContent: 'center',
         }}>
 
-          <TouchableOpacity onPress={() => TrackPlayer.stop()} accessibilityLabel="play button">
-                    <Image source={require('./assets/pausebtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
-                    </TouchableOpacity>
-
+        <TouchableOpacity
+        title="Dzmr"
+        onPress={() => this.props.navigation.navigate('Dzmr')}
+        color="#a41034">
+              <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+        </TouchableOpacity>
         </View>
 
       </View>

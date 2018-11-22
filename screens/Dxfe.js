@@ -85,9 +85,12 @@ onShare() {
         justifyContent: 'center',
       }}>
 
-        <TouchableOpacity onPress={() => this.play()} accessibilityLabel="play button">
-                  <Image source={require('./assets/playbtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
-                  </TouchableOpacity>
+      <TouchableOpacity
+      title="Pinoy Connection"
+      onPress={() => this.props.navigation.navigate('PinoyConnection')}
+      color="#a41034">
+            <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+      </TouchableOpacity>
 
       </View>
 
@@ -99,9 +102,12 @@ onShare() {
           justifyContent: 'center',
         }}>
 
-          <TouchableOpacity onPress={() => TrackPlayer.stop()} accessibilityLabel="play button">
-                    <Image source={require('./assets/pausebtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
-                    </TouchableOpacity>
+        <TouchableOpacity
+        title="Dxjl Radio"
+        onPress={() => this.props.navigation.navigate('Dxjl')}
+        color="#a41034">
+              <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+        </TouchableOpacity>
 
         </View>
 

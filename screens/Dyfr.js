@@ -26,15 +26,19 @@ export default class Dyfr extends React.Component {
             stopWithApp: true
         });
 
+}
 
-    await TrackPlayer.add({
+  play() {
+    TrackPlayer.add({
       id: 'track',
-      url: 'http://202.90.158.21:8000/febc_dyfr', // just for test!
-      title: 'Dyfr Radio',
-      artist: 'Dyfr Radio',
-    })
-    TrackPlayer.play();
+      url: 'http://202.90.158.21:8000/febc_dyfr',
+      title: 'Dxfe Radio',
+      artist: 'Dxfe Radio',
+    }).then(() => {
+      TrackPlayer.play();
+    });
   }
+
 
 
 

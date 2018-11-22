@@ -26,17 +26,14 @@ export default class Dzas extends React.Component{
             compactCapabilities: [CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO],
             stopWithApp: true
         });
-  }
 
-  play() {
-    TrackPlayer.add({
-      id: 'track',
-      url: 'http://202.55.90.209:8000/febc_dway',
-      title: 'DZAS Radio',
-      artist: 'DZAS Radio',
-    }).then(() => {
-      TrackPlayer.play();
-    });
+
+        await TrackPlayer.add({
+          id: 'track',
+          url: 'http://202.90.158.21:8000/febc_dzas',
+          title: 'DZAS Radio',
+          artist: 'DZAS Radio',
+        });
   }
 
   static navigationOptions = ({ navigation }) => {
@@ -70,6 +67,7 @@ export default class Dzas extends React.Component{
 
 
     render(){
+
       return(
         <View>
         <ImageBackground source={require('./assets/testbg.png')} style={styles.MainContainer}>
@@ -87,11 +85,16 @@ export default class Dzas extends React.Component{
           justifyContent: 'center',
         }}>
 
-          <TouchableOpacity onPress={() => this.play()} accessibilityLabel="play button">
-                    <Image source={require('./assets/playbtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
-                    </TouchableOpacity>
+        <TouchableOpacity
+        title="Dzmr"
+        onPress={() => this.props.navigation.navigate('Dzmr')}
+        color="#a41034">
+              <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+        </TouchableOpacity>
 
         </View>
+
+
 
           <Image source={require('./assets/702DZAS.png')} style={{ resizeMode : 'contain', width: 275, height: 300}} />
 
@@ -100,8 +103,12 @@ export default class Dzas extends React.Component{
             flexDirection: 'column',
             justifyContent: 'center',
           }}>
-            <TouchableOpacity onPress={() => TrackPlayer.stop()} accessibilityLabel="play button">
-                <Image source={require('./assets/pausebtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+
+          <TouchableOpacity
+          title="DZFE"
+          onPress={() => this.props.navigation.navigate('Dzfe')}
+          color="#a41034">
+                <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
           </TouchableOpacity>
 
           </View>

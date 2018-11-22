@@ -84,9 +84,12 @@ onShare() {
         justifyContent: 'center',
       }}>
 
-        <TouchableOpacity onPress={() => this.play()} accessibilityLabel="play button">
-                  <Image source={require('./assets/playbtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
-                  </TouchableOpacity>
+      <TouchableOpacity
+      title="Dxfe"
+      onPress={() => this.props.navigation.navigate('Dxfe')}
+      color="#a41034">
+            <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+      </TouchableOpacity>
 
       </View>
 
@@ -98,9 +101,12 @@ onShare() {
           justifyContent: 'center',
         }}>
 
-          <TouchableOpacity onPress={() => this.play()} accessibilityLabel="play button">
-                    <Image source={require('./assets/pausebtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
-                    </TouchableOpacity>
+        <TouchableOpacity
+        title="Dxki"
+        onPress={() => this.props.navigation.navigate('Dxki')}
+        color="#a41034">
+              <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+        </TouchableOpacity>
 
         </View>
 

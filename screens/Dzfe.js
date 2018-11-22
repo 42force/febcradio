@@ -42,8 +42,8 @@ export default class Dzfe extends React.Component {
       headerTitle: 'DZFE Radio',
       headerRight: (
         <Button
-          title="DZFE"
-          onPress={() => navigation.navigate('Care')}
+          title="Dzmr"
+          onPress={() => navigation.navigate('Dzmr')}
           color="#a41034"
         />
       ),
@@ -85,9 +85,12 @@ onShare() {
         justifyContent: 'center',
       }}>
 
-        <TouchableOpacity onPress={() => this.play()} accessibilityLabel="play button">
-                  <Image source={require('./assets/playbtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
-                  </TouchableOpacity>
+      <TouchableOpacity
+      title="Dzfe"
+      onPress={() => this.props.navigation.navigate('Dzfe')}
+      color="#a41034">
+            <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+      </TouchableOpacity>
 
       </View>
 
@@ -98,10 +101,12 @@ onShare() {
           flexDirection: 'column',
           justifyContent: 'center',
         }}>
-          <TouchableOpacity onPress={() => TrackPlayer.stop()} accessibilityLabel="play button">
-              <Image source={require('./assets/pausebtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+        <TouchableOpacity
+        title="Dzmr Radio"
+        onPress={() => this.props.navigation.navigate('Dzmr')}
+        color="#a41034">
+              <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
         </TouchableOpacity>
-
         </View>
 
       </View>

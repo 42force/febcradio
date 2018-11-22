@@ -25,18 +25,16 @@ export default class Care extends React.Component {
             compactCapabilities: [CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO],
             stopWithApp: true
         });
+
+        await TrackPlayer.add({
+          id: 'track',
+          url: 'http://202.55.90.209:8000/febc_dway',
+          title: 'DWAY Radio',
+          artist: 'DWAY Radio',
+        });
+
   }
 
-  play() {
-    TrackPlayer.add({
-      id: 'track',
-      url: 'http://202.55.90.209:8000/febc_dway',
-      title: 'DWAY RADIO',
-      artist: 'Various Artists',
-    }).then(() => {
-      TrackPlayer.play();
-    });
-  }
 
 
   static navigationOptions = ({ navigation }) => {
@@ -87,9 +85,12 @@ onShare() {
         justifyContent: 'center',
       }}>
 
-        <TouchableOpacity onPress={() => this.play()} accessibilityLabel="play button">
-                  <Image source={require('./assets/playbtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
-                  </TouchableOpacity>
+      <TouchableOpacity
+      title="DZFE"
+      onPress={() => this.props.navigation.navigate('Dzfe')}
+      color="#a41034">
+            <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+      </TouchableOpacity>
 
       </View>
 
@@ -100,10 +101,12 @@ onShare() {
           flexDirection: 'column',
           justifyContent: 'center',
         }}>
-          <TouchableOpacity onPress={() => TrackPlayer.stop()} accessibilityLabel="play button">
-              <Image source={require('./assets/pausebtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+        <TouchableOpacity
+        title="PinoyConnection"
+        onPress={() => this.props.navigation.navigate('PinoyConnection')}
+        color="#a41034">
+              <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
         </TouchableOpacity>
-
         </View>
 
       </View>
