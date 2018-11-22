@@ -11,7 +11,7 @@ TouchableOpacity, Linking} from "react-native";
 
 import  Share from 'react-native-share';
 
-import TrackPlayer from 'react-native-track-player';
+import TrackPlayer,  { CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO }from 'react-native-track-player';
 
 
 
@@ -19,37 +19,32 @@ export default class Dyfr extends React.Component {
 
   async componentDidMount() {
     await TrackPlayer.setupPlayer({});
+
+    TrackPlayer.updateOptions({
+            capabilities: [CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO],
+            compactCapabilities: [CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO],
+            stopWithApp: true
+        });
+
+
     await TrackPlayer.add({
       id: 'track',
-      url: 'http://202.55.90.209:8000/febc_dway', // just for test!
-      title: 'DZAS Radio',
-      artist: 'DZAS DJ',
+      url: 'http://202.90.158.21:8000/febc_dyfr', // just for test!
+      title: 'Dyfr Radio',
+      artist: 'Dyfr Radio',
     })
     TrackPlayer.play();
   }
 
-  play() {
-    TrackPlayer.add({
-      id: 'track',
-      url: 'http://202.55.90.209:8000/febc_dway',
-      title: 'DZAS Radio',
-      artist: 'DZAS Radio',
-    }).then(() => {
-      TrackPlayer.play();
-    });
-  }
 
-  stop(){
-    TrackPlayer.stop();
-  }
 
   static navigationOptions = ({ navigation }) => {
     return {
-      headerTitle: 'DZAS',
+      headerTitle: 'DYFR Radio',
       headerRight: (
         <Button
-          title="DZFE"
-          onPress={() => navigation.navigate('Dzfe')}
+          title="DYVS"
+          onPress={() => navigation.navigate('Dyvs')}
           color="#a41034"
         />
       ),
@@ -97,7 +92,7 @@ onShare() {
 
       </View>
 
-        <Image source={require('./assets/702DZAS.png')} style={{ resizeMode : 'contain', width: 250, height: 300}} />
+        <Image source={require('./assets/987DYFR.png')} style={{ resizeMode : 'contain', width: 275, height: 300}} />
 
         <View style={{
           flex: 1,

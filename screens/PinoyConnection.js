@@ -11,34 +11,29 @@ TouchableOpacity, Linking} from "react-native";
 
 import  Share from 'react-native-share';
 
-import TrackPlayer from 'react-native-track-player';
+import TrackPlayer,  { CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO }from 'react-native-track-player';
 
 export default class PinoyConnection extends React.Component {
 
   async componentDidMount() {
     await TrackPlayer.setupPlayer({});
-    await TrackPlayer.add({
-      id: 'track',
-      url: 'http://202.55.90.209:8000/febc_dway', // just for test!
-      title: 'DZAS Radio',
-      artist: 'DZAS DJ',
-    })
-    TrackPlayer.play();
+
+    TrackPlayer.updateOptions({
+            capabilities: [CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO],
+            compactCapabilities: [CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO],
+            stopWithApp: true
+        });
   }
 
   play() {
     TrackPlayer.add({
       id: 'track',
-      url: 'http://202.55.90.209:8000/febc_dway',
+      url: 'http://202.90.158.21:8000/febc_pcon',
       title: 'DZAS Radio',
       artist: 'DZAS Radio',
     }).then(() => {
       TrackPlayer.play();
     });
-  }
-
-  stop(){
-    TrackPlayer.stop();
   }
 
   static navigationOptions = ({ navigation }) => {
@@ -95,7 +90,7 @@ onShare() {
 
       </View>
 
-        <Image source={require('./assets/PinoyConnection.png')} style={{ resizeMode : 'contain', width: 250, height: 300}} />
+        <Image source={require('./assets/PinoyConnection.png')} style={{ resizeMode : 'contain', width: 275, height: 300}} />
 
         <View style={{
           flex: 1,

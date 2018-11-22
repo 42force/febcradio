@@ -11,7 +11,7 @@ TouchableOpacity, Linking} from "react-native";
 
 import  Share from 'react-native-share';
 
-import TrackPlayer from 'react-native-track-player';
+import TrackPlayer,  { CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO }from 'react-native-track-player';
 
 
 
@@ -19,37 +19,31 @@ export default class Dxfe extends React.Component {
 
   async componentDidMount() {
     await TrackPlayer.setupPlayer({});
-    await TrackPlayer.add({
-      id: 'track',
-      url: 'http://202.55.90.209:8000/febc_dway', // just for test!
-      title: 'DZAS Radio',
-      artist: 'DZAS DJ',
-    })
-    TrackPlayer.play();
+
+    TrackPlayer.updateOptions({
+            capabilities: [CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO],
+            compactCapabilities: [CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO],
+            stopWithApp: true
+        });
   }
 
   play() {
     TrackPlayer.add({
       id: 'track',
-      url: 'http://202.55.90.209:8000/febc_dway',
-      title: 'DZAS Radio',
-      artist: 'DZAS Radio',
+      url: 'http://202.90.158.21:8000/febc_dzfe',
+      title: 'Dxfe Radio',
+      artist: 'Dxfe Radio',
     }).then(() => {
       TrackPlayer.play();
     });
   }
-
-  stop(){
-    TrackPlayer.stop();
-  }
-
   static navigationOptions = ({ navigation }) => {
     return {
-      headerTitle: 'DZAS',
+      headerTitle: 'DXFE Radio',
       headerRight: (
         <Button
-          title="DZFE"
-          onPress={() => navigation.navigate('Dzfe')}
+          title="DXJL Radio"
+          onPress={() => navigation.navigate('Dxjl')}
           color="#a41034"
         />
       ),
@@ -97,7 +91,7 @@ onShare() {
 
       </View>
 
-        <Image source={require('./assets/702DZAS.png')} style={{ resizeMode : 'contain', width: 250, height: 300}} />
+        <Image source={require('./assets/1197DXFE.png')} style={{ resizeMode : 'contain', width: 275, height: 300}} />
 
         <View style={{
           flex: 1,
