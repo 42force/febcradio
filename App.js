@@ -1,34 +1,40 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Button } from "react-native";
 import { createStackNavigator, createAppContainer } from "react-navigation";
+import Dzas from './screens/Dzas';
+import Dzfe from './screens/Dzfe';
+import Care from './screens/Care';
+import Dxfe from './screens/Dxfe';
+import Dyfr from './screens/Dyfr';
+import Dxjl from './screens/Dxjl';
+import Dyvs from './screens/Dyvs';
+import Dzmr from './screens/Dzmr';
+import PinoyConnection from './screens/PinoyConnection';
+import Dxki from './screens/Dxki';
 
 
+const RootStack = createStackNavigator({
 
-class HomeScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>Home Screen</Text>
-        <Button
-          title="Go to Details"
-          onPress={() => this.props.navigation.navigate('Dzas')}
-        />
-      </View>
-    );
-  }
+    Dzas : Dzas,
+    Dzfe : Dzfe,
+    Dxfe : Dxfe,
+    Dxjl : Dxjl,
+    Care : Care,
+    Dxki : Dxki,
+    Dyfr : Dyfr,
+    Dyvs : Dyvs,
+    Dzmr : Dzmr,
+    PinoyConnection : PinoyConnection
+
+},
+
+{
+  initialRouteName: 'Dzas',
 }
-
-const AppNavigator = createStackNavigator(
-  {
-    Home: HomeScreen
-  },
-  {
-    initialRouteName: 'Home',
-  }
 );
 
+const AppContainer = createAppContainer(RootStack);
 
-const AppContainer = createAppContainer(AppNavigator);
 
 export default class App extends React.Component {
   render() {
