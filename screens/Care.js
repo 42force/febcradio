@@ -11,7 +11,7 @@ TouchableOpacity, Linking} from "react-native";
 
 import  Share from 'react-native-share';
 
-import TrackPlayer from 'react-native-track-player';
+import TrackPlayer,  { CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO }from 'react-native-track-player';
 
 
 
@@ -19,37 +19,33 @@ export default class Care extends React.Component {
 
   async componentDidMount() {
     await TrackPlayer.setupPlayer({});
-    await TrackPlayer.add({
-      id: 'track',
-      url: 'http://202.55.90.209:8000/febc_dway', // just for test!
-      title: 'DZAS Radio',
-      artist: 'DZAS DJ',
-    })
-    TrackPlayer.play();
+
+    TrackPlayer.updateOptions({
+            capabilities: [CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO],
+            compactCapabilities: [CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO],
+            stopWithApp: true
+        });
   }
 
   play() {
     TrackPlayer.add({
       id: 'track',
       url: 'http://202.55.90.209:8000/febc_dway',
-      title: 'DZAS Radio',
-      artist: 'DZAS Radio',
+      title: 'DWAY RADIO',
+      artist: 'Various Artists',
     }).then(() => {
       TrackPlayer.play();
     });
   }
 
-  stop(){
-    TrackPlayer.stop();
-  }
 
   static navigationOptions = ({ navigation }) => {
     return {
-      headerTitle: 'DZAS',
+      headerTitle: 'Care Radio',
       headerRight: (
         <Button
-          title="DZFE"
-          onPress={() => navigation.navigate('Dzfe')}
+          title="Pinoy Connection"
+          onPress={() => navigation.navigate('PinoyConnection')}
           color="#a41034"
         />
       ),
@@ -97,17 +93,16 @@ onShare() {
 
       </View>
 
-        <Image source={require('./assets/702DZAS.png')} style={{ resizeMode : 'contain', width: 250, height: 300}} />
+        <Image source={require('./assets/CARE104DWAY.png')} style={{ resizeMode : 'contain', width: 275, height: 300}} />
 
         <View style={{
           flex: 1,
           flexDirection: 'column',
           justifyContent: 'center',
         }}>
-
-          <TouchableOpacity onPress={() => this.play()} accessibilityLabel="play button">
-                    <Image source={require('./assets/playbtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
-                    </TouchableOpacity>
+          <TouchableOpacity onPress={() => TrackPlayer.stop()} accessibilityLabel="play button">
+              <Image source={require('./assets/pausebtn.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+        </TouchableOpacity>
 
         </View>
 
