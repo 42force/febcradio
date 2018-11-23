@@ -89,12 +89,12 @@ onShare() {
       title="Dzfe"
       onPress={() => this.props.navigation.navigate('Dzas')}
       color="#a41034">
-            <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+            <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 25}} />
       </TouchableOpacity>
 
       </View>
 
-        <Image source={require('./assets/987DZFE.png')} style={{ resizeMode : 'contain', width: 275, height: 300}} />
+        <Image source={require('./assets/987DZFE.png')} style={{ resizeMode : 'contain', width: 300, height: 300}} />
 
         <View style={{
           flex: 1,
@@ -105,7 +105,7 @@ onShare() {
         title="Dxjl Radio"
         onPress={() => this.props.navigation.navigate('Dxjl')}
         color="#a41034">
-              <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+              <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 25}} />
         </TouchableOpacity>
         </View>
 

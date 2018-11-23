@@ -40,7 +40,7 @@ export default class Dzmr extends React.Component {
       headerTitle: 'DZMR Radio',
       headerRight: (
         <Button
-          title="PinoyConnection"
+          title="Pinoy"
           onPress={() => navigation.navigate('PinoyConnection')}
           color="#a41034"
         />

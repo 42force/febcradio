@@ -11,6 +11,7 @@ import Dyvs from './screens/Dyvs';
 import Dzmr from './screens/Dzmr';
 import PinoyConnection from './screens/PinoyConnection';
 import Dxki from './screens/Dxki';
+import Now from './screens/Now';
 
 
 const RootStack = createStackNavigator({
@@ -24,7 +25,8 @@ const RootStack = createStackNavigator({
     Dyfr : Dyfr,
     Dyvs : Dyvs,
     Dzmr : Dzmr,
-    PinoyConnection : PinoyConnection
+    PinoyConnection : PinoyConnection,
+    Now : Now
 
 },
 

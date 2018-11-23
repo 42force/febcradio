@@ -41,8 +41,8 @@ export default class PinoyConnection extends React.Component {
       headerTitle: 'Pinoy Connection',
       headerRight: (
         <Button
-          title="DXFE Radio"
-          onPress={() => navigation.navigate('Dxfe')}
+          title="Now"
+          onPress={() => navigation.navigate('Now')}
           color="#a41034"
         />
       ),
@@ -85,15 +85,15 @@ onShare() {
       }}>
 
       <TouchableOpacity
-      title="Care"
-      onPress={() => this.props.navigation.navigate('Care')}
+      title="Dzmr"
+      onPress={() => this.props.navigation.navigate('Dzmr')}
       color="#a41034">
-            <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+            <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 25}} />
       </TouchableOpacity>
 
       </View>
 
-        <Image source={require('./assets/PinoyConnection.png')} style={{ resizeMode : 'contain', width: 275, height: 300}} />
+        <Image source={require('./assets/PinoyConnection.png')} style={{ resizeMode : 'contain', width: 300, height: 300}} />
 
         <View style={{
           flex: 1,
@@ -102,10 +102,10 @@ onShare() {
         }}>
 
         <TouchableOpacity
-        title="Dxfe"
-        onPress={() => this.props.navigation.navigate('Dxfe')}
+        title="Now"
+        onPress={() => this.props.navigation.navigate('Now')}
         color="#a41034">
-              <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+              <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 25}} />
         </TouchableOpacity>
 
         </View>

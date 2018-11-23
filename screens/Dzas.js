@@ -89,14 +89,14 @@ export default class Dzas extends React.Component{
         title="PinoyConnection"
         onPress={() => this.props.navigation.navigate('PinoyConnection')}
         color="#a41034">
-              <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+              <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 25}} />
         </TouchableOpacity>
 
         </View>
 
 
 
-          <Image source={require('./assets/702DZAS.png')} style={{ resizeMode : 'contain', width: 275, height: 300}} />
+          <Image source={require('./assets/702DZAS.png')} style={{ resizeMode : 'contain', width: 300, height: 300}} />
 
           <View style={{
             flex: 1,
@@ -108,7 +108,7 @@ export default class Dzas extends React.Component{
           title="DZFE"
           onPress={() => this.props.navigation.navigate('Dzfe')}
           color="#a41034">
-                <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+                <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 25}} />
           </TouchableOpacity>
 
           </View>
