@@ -18,7 +18,7 @@ import TrackPlayer,  { CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPAB
 export default class Dzmr extends React.Component {
 
   async componentDidMount() {
-    await TrackPlayer.setupPlayer({});
+  await TrackPlayer.setupPlayer({});
 
     TrackPlayer.updateOptions({
             capabilities: [CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO],
@@ -27,23 +27,12 @@ export default class Dzmr extends React.Component {
         });
 
 
-        await TrackPlayer.add({
+  await TrackPlayer.add({
           id: 'track',
-          url: 'http://icecast.eradioportal.com:8000/febc_dyfr',
-          title: 'DZMR Radio',
-          artist: 'DZMR Radio',
-        });
-  }
-
-  play() {
-    TrackPlayer.add({
-      id: 'track',
-      url: 'http://icecast.eradioportal.com:8000/febc_dyfr',
-      title: 'DZAS Radio',
-      artist: 'DZAS Radio',
-    }).then(() => {
-      TrackPlayer.play();
-    });
+          url: 'http://sg-icecast.eradioportal.com:8000/febc_dyfr',
+          title: 'DZAS Radio',
+          artist: 'DZAS Radio',
+        });TrackPlayer.play();
   }
 
   static navigationOptions = ({ navigation }) => {
@@ -150,7 +139,7 @@ onShare() {
 
 
       </View>
-    );
+    )
   }
 }
 

@@ -15,7 +15,7 @@ import Now from './screens/Now';
 
 
 const RootStack = createStackNavigator({
-
+    Home : Home,
     Dzas : Dzas,
     Dzfe : Dzfe,
     Dxfe : Dxfe,

@@ -18,8 +18,10 @@ import TrackPlayer,  { CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPAB
 export default class Dzas extends React.Component{
 
 
+
+
   async componentDidMount() {
-    await TrackPlayer.setupPlayer({});
+  await TrackPlayer.setupPlayer({});
 
     TrackPlayer.updateOptions({
             capabilities: [CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO],
@@ -27,12 +29,8 @@ export default class Dzas extends React.Component{
             stopWithApp: true
         });
 
+        await TrackPlayer.add([dzas]).then(play(){
 
-        await TrackPlayer.add({
-          id: 'track',
-          url: 'http://202.90.158.21:8000/febc_dzas',
-          title: 'DZAS Radio',
-          artist: 'DZAS Radio',
         });
   }
 

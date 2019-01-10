@@ -1,0 +1,60 @@
+[
+  {
+    "id": "1111",
+    "url": "http://sg-icecast.eradioportal.com:8000/febc_dzas",
+    "title": "DZAS DJ",
+    "artist": "Various DZAS",
+    "artwork": "require('./assets/702DZAS.png')"
+  },
+  {
+    "id": "2222",
+    "url": "http://sg-icecast.eradioportal.com:8000/febc_dway",
+    "title": "DWAY",
+    "artist": "DWAY DJ",
+    "artwork": "require('./assets/CARE104DWAY.png')"
+  },
+  {
+    "id": "3333",
+    "url": "http://sg-icecast.eradioportal.com:8000/febc_dxki",
+    "title": "DXKI Radio",
+    "artist": "DXKI Radio",
+    "artwork": "require('./assets/1062DXKI.png')"
+  },
+  {
+    "id": "4444",
+    "url": "http://sg-icecast.eradioportal.com:8000/febc_dyfr",
+    "title": "DYFR Radio",
+    "artist": "DYFR Radio",
+    "artwork": "require('./assets/987DYFR.png')"
+  },
+  {
+    "id": "5555",
+    "url": "http://sg-icecast.eradioportal.com:8000/febc_dzfe",
+    "title": "DZFE Radio",
+    "artist": "DZFE Radio",
+    "artwork": "require('./assets/987DZFE.png')"
+  },
+  {
+    "id": "6666",
+    "url": "http://sg-icecast.eradioportal.com:8000/febc_pcon",
+    "title": "Pinoy Connection",
+    "artist": "Pinoy Connection",
+    "artwork": "require('./assets/PinoyConnection.png')"
+  },
+  {
+    "id": "7777",
+    "url": "nowxd http://sg-icecast.eradioportal.com:8000/nowxd",
+    "title": "Now XD",
+    "artist": "Now XD",
+    "artwork": "require('./assets/NOWXD.png')"
+  }
+]
+
+
+dway http://sg-icecast.eradioportal.com:8000/febc_dway
+dxki http://sg-icecast.eradioportal.com:8000/febc_dxki
+dyfr http://sg-icecast.eradioportal.com:8000/febc_dyfr
+dzas http://sg-icecast.eradioportal.com:8000/febc_dzas
+dzfe http://sg-icecast.eradioportal.com:8000/febc_dzfe
+pcon http://sg-icecast.eradioportal.com:8000/febc_pcon
+nowxd http://sg-icecast.eradioportal.com:8000/nowxd

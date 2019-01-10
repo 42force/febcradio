@@ -31,7 +31,7 @@ export default class Dxjl extends React.Component {
       url: 'http://202.55.90.209:8000/febc_dway', // just for test!
       title: 'DXJL Radio',
       artist: 'DXJL Radio',
-    })
+    });
     TrackPlayer.play();
   }
 

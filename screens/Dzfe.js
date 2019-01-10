@@ -24,17 +24,14 @@ export default class Dzfe extends React.Component {
             compactCapabilities: [CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO],
             stopWithApp: true
         });
-  }
 
-  play() {
-    TrackPlayer.add({
-      id: 'track',
-      url: 'http://202.90.158.21:8000/febc_dzfe',
-      title: 'DZAS Radio',
-      artist: 'DZAS Radio',
-    }).then(() => {
-      TrackPlayer.play();
-    });
+        await TrackPlayer.add({
+          id: 'track',
+          url: 'http://sg-icecast.eradioportal.com:8000/febc_dzfe',
+          title: 'DWAY Radio',
+          artist: 'DWAY Radio',
+        });
+        TrackPlayer.play();
   }
 
   static navigationOptions = ({ navigation }) => {

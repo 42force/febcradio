@@ -23,18 +23,16 @@ export default class Dyvs extends React.Component {
             compactCapabilities: [CAPABILITY_PLAY, CAPABILITY_PAUSE, CAPABILITY_STOP, CAPABILITY_SEEK_TO],
             stopWithApp: true
         });
+
+        await TrackPlayer.add({
+          id: 'track',
+          url: 'http://202.90.158.21:8000/febc_dyvs',
+          title: 'DWAY Radio',
+          artist: 'DWAY Radio',
+        }); TrackPlayer.play();
 }
 
-  play() {
-    TrackPlayer.add({
-      id: 'track',
-      url: 'http://202.90.158.21:8000/febc_dyvs',
-      title: 'Dxfe Radio',
-      artist: 'Dxfe Radio',
-    }).then(() => {
-      TrackPlayer.play();
-    });
-  }
+
   static navigationOptions = ({ navigation }) => {
     return {
       headerTitle: 'DYVS Radio',
@@ -137,7 +135,7 @@ onShare() {
 
 
       </View>
-    );
+    )
   }
 }
 

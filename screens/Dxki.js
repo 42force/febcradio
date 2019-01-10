@@ -27,10 +27,10 @@ export default class Dyvs extends React.Component {
 
     await TrackPlayer.add({
       id: 'track',
-      url: 'http://202.55.90.209:8000/febc_dxki',
+      url: 'http://sg-icecast.eradioportal.com:8000/febc_dxki',
       title: 'DXKI Radio',
       artist: 'DXKI Radio',
-    })
+    });
     TrackPlayer.play();
 }
 

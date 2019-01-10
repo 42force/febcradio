@@ -32,7 +32,7 @@ export default class Dzmr extends React.Component {
           url: 'http://202.55.90.209:8000/febc_dzmr',
           title: 'DZMR Radio',
           artist: 'DZMR Radio',
-        });
+        });TrackPlayer.play();
   }
 
   static navigationOptions = ({ navigation }) => {
@@ -87,12 +87,12 @@ onShare() {
       title="Dyvs"
       onPress={() => this.props.navigation.navigate('Dyvs')}
       color="#a41034">
-            <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+            <Image source={require('./assets/arrowleft.png')} style={{resizeMode: 'contain', width: 50, height: 25}} />
       </TouchableOpacity>
 
       </View>
 
-        <Image source={require('./assets/1143DZMR.png')} style={{ resizeMode : 'contain', width: 275, height: 300}} />
+        <Image source={require('./assets/1143DZMR.png')} style={{ resizeMode : 'contain', width: 300, height: 300}} />
 
         <View style={{
           flex: 1,
@@ -104,7 +104,7 @@ onShare() {
         title="PinoyConnection"
         onPress={() => this.props.navigation.navigate('PinoyConnection')}
         color="#a41034">
-              <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 35}} />
+              <Image source={require('./assets/arrowright.png')} style={{resizeMode: 'contain', width: 50, height: 25}} />
         </TouchableOpacity>
 
         </View>

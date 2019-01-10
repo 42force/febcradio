@@ -28,10 +28,11 @@ export default class Care extends React.Component {
 
         await TrackPlayer.add({
           id: 'track',
-          url: 'http://202.55.90.209:8000/febc_dway',
+          url: 'http://sg-icecast.eradioportal.com:8000/febc_dway',
           title: 'DWAY Radio',
           artist: 'DWAY Radio',
         });
+        TrackPlayer.play();
 
   }
 
